@@ -25,104 +25,50 @@ import {
   threejs,
 } from "../assets";
 
+// Navigation Links
 export const navLinks = [
-  {
-    id: "about",
-    title: "About",
-  },
-  {
-    id: "work",
-    title: "Work",
-  },
-  {
-    id: "contact",
-    title: "Contact",
-  },
+  { id: "about", title: "About" },
+  { id: "work", title: "Work" },
+  { id: "contact", title: "Contact" },
 ];
 
+// Services Offered
 const services = [
-  {
-    title: "Programmer",
-    icon: web,
-  },
-  {
-    title: "Data Analyst",
-    icon: mobile,
-  },
-  {
-    title: "Augmented Realty",
-    icon: backend,
-  },
-  {
-    title: "Graphic Design",
-    icon: creator,
-  },
+  { title: "Programmer", icon: web },
+  { title: "Data Analyst", icon: mobile },
+  { title: "Augmented Reality", icon: backend },
+  { title: "Graphic Design", icon: creator },
 ];
 
+// Technologies
 const technologies = [
-  {
-    name: "docker",
-    icon: docker,
-  },
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
+  { name: "Docker", icon: docker },
+  { name: "HTML 5", icon: html },
+  { name: "CSS 3", icon: css },
+  { name: "MongoDB", icon: mongodb },
+  { name: "Node JS", icon: nodejs },
+  { name: "Figma", icon: figma },
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "React JS", icon: reactjs },
+  { name: "Redux Toolkit", icon: redux },
+  { name: "Tailwind CSS", icon: tailwind },
+  { name: "Three JS", icon: threejs },
+  { name: "Git", icon: git },
 ];
 
+// Experience Details
 const experiences = [
   {
-    title: "Google cloud arcade Facilitator",
+    title: "Google Cloud Arcade Facilitator",
     company_name: "Google Cloud",
     icon: starbucks,
     iconBg: "#000",
-    date: "Aug2024 - Present",
+    date: "Aug 2024 - Present",
     points: [
-      "As a Google Cloud Arcade Facilitator, I guide participants through hands-on experiences with Google Cloud technologies, ensuring they acquire practical skills in cloud computing. My responsibilities include delivering structured learning sessions, assisting participants with real-time problem-solving, and fostering an engaging learning environment. I help participants navigate through interactive labs, provide insights into cloud services, and encourage them to explore and innovate with Google Cloud tools.",
+      "Guide participants through hands-on experiences with Google Cloud technologies.",
+      "Deliver structured learning sessions and assist with real-time problem-solving.",
+      "Foster an engaging learning environment and provide insights into cloud services.",
     ],
   },
   {
@@ -132,10 +78,9 @@ const experiences = [
     iconBg: "#000000",
     date: "Jan 2023 - Present",
     points: [
-      "Designed and developed user-friendly interfaces for web and mobile applications, ensuring a seamless user experience and high levels of engagement.",
-      "Proficient in HTML, CSS, JavaScript, and graphic design software such as Photoshop, Figma and Illustrator",
-      "Worked as a freelance web developer, managing projects and clients.",
-      ,
+      "Designed user-friendly interfaces for web and mobile applications.",
+      "Proficient in HTML, CSS, JavaScript, Photoshop, Figma, and Illustrator.",
+      "Managed projects and clients as a freelance web developer.",
     ],
   },
   {
@@ -145,27 +90,30 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
-      "Proficient in 3D modeling, texturing, lighting, rendering, and animation software, such as Blender",
-      "Provide design services for various applications, including product design, branding, marketing, and virtual environment",
-      "Worked collaboratively with other artists, designers, and production teams to ensure cohesiveness and consistency of visuals",
-      "Deliver projects that align with client expectations and current industry trends.",
+      "Proficient in 3D modeling, texturing, lighting, rendering, and animation using Blender.",
+      "Provide design services for product design, branding, marketing, and virtual environments.",
+      "Collaborated with artists and production teams to ensure visual consistency.",
     ],
   },
-  /*{
+  // Uncomment if needed
+  /*
+  {
     title: "Leadership Experience",
     company_name: "Student Leader and Build Leader | Under 25 Summit",
     icon: meta,
     iconBg: "#000000",
-    date: "Dec 2022 - March 2023",
+    date: "Dec 2022 - Mar 2023",
     points: [
-      "As a Student Leader, I was responsible for leading a team of hustlers and managing various aspects of the festival. The festival had over 35k+ students attending and featured 7 stages with more than 500+ thought leaders that included CEOs, Influencers, change makers, celebrities, and Student talent across the globe.",
-      "Throughout the internship, I expressed my ability to effectively coordinate and manage a team. I was trained in various skills such as storytelling, festival management, and leadership.",
-      "As a Build Leader, my responsibilities included designing, estimating, and coordinating the build of an art installation that was displayed at the festival.",
+      "Led a team and managed festival aspects with over 35k+ attendees.",
+      "Trained in storytelling, festival management, and leadership.",
+      "Designed and coordinated the build of an art installation.",
     ],
     link: "https://docs.google.com/document/d/1N7kQVzkMqRNvYhY9tnZqIVmIFVD61qjUQ4lOoV12noQ/edit",
-  },*/
+  },
+  */
 ];
 
+// Testimonials
 const testimonials = [
   {
     testimonial:
@@ -193,45 +141,28 @@ const testimonials = [
   },
 ];
 
+// Projects
 const projects = [
   {
-    name: "Programming Projects ",
+    name: "Programming Projects",
     description:
-      "As a programmer, I'm proud to say that my collection of programming projects demonstrates my versatility and proficiency in multiple programming languages and technologies. With my skills in Python, HTML, CSS, JavaScript, React JS, C++, and MySQL, I've been able to create a variety of innovative and exciting projects.",
+      "A collection of programming projects showcasing proficiency in various languages and technologies like Python, HTML, CSS, JavaScript, React JS, C++, and MySQL.",
     tags: [
-      {
-        name: "coding",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "web-development",
-        color: "green-text-gradient",
-      },
-      {
-        name: "androiddevelopment",
-        color: "pink-text-gradient",
-      },
+      { name: "Coding", color: "blue-text-gradient" },
+      { name: "Web Development", color: "green-text-gradient" },
+      { name: "Android Development", color: "pink-text-gradient" },
     ],
     image: carrent,
     source_code_link: "https://github.com/velavan2304",
   },
   {
-    name: "Augmented Reality ",
+    name: "Augmented Reality",
     description:
-      "This project involves the development of an Augmented Reality (AR) application that overlays digital content onto the real world. The AR experience allows users to interact with 3D models, animations, and information displayed in their physical environment through devices like smartphones, tablets, or AR glasses. The project aims to create an engaging and interactive experience, applicable across various fields such as education, marketing, gaming, and product visualization.",
+      "Development of an AR application that overlays digital content onto the real world, allowing interaction with 3D models and information.",
     tags: [
-      {
-        name: "AR",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "sparkar",
-        color: "green-text-gradient",
-      },
-      {
-        name: "lensstudio",
-        color: "pink-text-gradient",
-      },
+      { name: "AR", color: "blue-text-gradient" },
+      { name: "Spark AR", color: "green-text-gradient" },
+      { name: "Lens Studio", color: "pink-text-gradient" },
     ],
     image: jobit,
     source_code_link:
@@ -240,20 +171,11 @@ const projects = [
   {
     name: "UI & UX Design",
     description:
-      "As a multimedia artist, I have a diverse skill set that includes 3D art, graphic design, and video editing. With my expertise in these fields, I have been able to create engaging and dynamic visual content that captivates audiences and communicates messages effectively. My skill set as an artist allows me to creating compelling visual content that meets the client's needs and exceeds their expectations.",
+      "Creation of engaging visual content through 3D art, graphic design, and video editing, tailored to meet client needs and exceed expectations.",
     tags: [
-      {
-        name: "blender",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "photoshop",
-        color: "green-text-gradient",
-      },
-      {
-        name: "premiere-pro",
-        color: "pink-text-gradient",
-      },
+      { name: "Blender", color: "blue-text-gradient" },
+      { name: "Photoshop", color: "green-text-gradient" },
+      { name: "Premiere Pro", color: "pink-text-gradient" },
     ],
     image: tripguide,
     source_code_link: "",

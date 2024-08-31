@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
@@ -13,20 +13,20 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 100);
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll]);
+
+  const handleLinkClick = (title) => {
+    setActive(title);
+    setToggle(false);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <nav
@@ -40,30 +40,37 @@ const Navbar = () => {
         <Link
           to="/"
           className="flex items-center gap-3"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
+          onClick={() => handleLinkClick("")}
         >
           <img src={logo} alt="logo" className="w-10 h-10 object-contain" />
-          <p className="text-white text-[20px] font-bold cursor-pointer flex  ">
-            Velavan &nbsp;
-            <span className="sm:block hidden"> | Portfolio </span>
+          <p className="text-white text-[20px] font-bold flex items-center">
+            Velavan&nbsp;
+            <span className="sm:block hidden"> | Portfolio</span>
           </p>
-          <br></br>
-          <a href="https://www.linkedin.com/in/velavanv/" target="_blank">
-            <img src={navIcon1} alt="" />
-          </a>
-          <br></br>
-          <a href="https://www.instagram.com/velavan2304/" target="_blank">
-            <img src={navIcon3} alt="" />
-          </a>
-          <br></br>
-          <a href="https://github.com/velavan2304" target="_blank">
-            <img src={navIcon2} alt="" />
-          </a>
+          <div className="flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/velavanv/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={navIcon1} alt="LinkedIn" />
+            </a>
+            <a
+              href="https://www.instagram.com/velavan2304/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={navIcon3} alt="Instagram" />
+            </a>
+            <a
+              href="https://github.com/velavan2304"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={navIcon2} alt="GitHub" />
+            </a>
+          </div>
         </Link>
-        <div className="social icon"></div>
 
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((nav) => (
@@ -71,8 +78,8 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-poppins  font-medium cursor-pointer text-[16px]`}
-              onClick={() => setActive(nav.title)}
+              } hover:text-white text-[18px] font-poppins font-medium cursor-pointer`}
+              onClick={() => handleLinkClick(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
@@ -92,17 +99,14 @@ const Navbar = () => {
               !toggle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+            <ul className="list-none flex flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
+                  onClick={() => handleLinkClick(nav.title)}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>
                 </li>

@@ -6,9 +6,8 @@ import { SectionWrapper } from "../hoc";
 import { technologies } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { styles } from "../styles";
-import { services } from "../constants";
 
-const Tech = () => {
+const Tech = React.memo(() => {
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -20,7 +19,7 @@ const Tech = () => {
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[24px] max-w-4xl leading-[30px]"
+        className={`${styles.textSecondary} mt-4 text-[24px] max-w-4xl leading-[30px]`}
       >
         Being a lifelong learner is a trait that is really important to me, and
         I know that a good education is not just for the schoolyard. Some
@@ -39,6 +38,6 @@ const Tech = () => {
       </div>
     </>
   );
-};
+});
 
 export default SectionWrapper(Tech, "");
